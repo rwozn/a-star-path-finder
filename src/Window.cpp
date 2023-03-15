@@ -97,13 +97,13 @@ void Window::registerWindow(HINSTANCE instance)
 
 	if(!buttonEraseHandle)
 		throw std::runtime_error("CreateWindowEx failed for button erase");
-
+	
 	buttonBlankHandle = CreateWindowEx
 	(
 		NULL,
 		buttonClassName,
 		L"blank",
-		WS_CHILD | WS_VISIBLE | WS_GROUP | BS_AUTORADIOBUTTON,
+		WS_CHILD | WS_VISIBLE | BS_AUTORADIOBUTTON,
 		870,
 		120,
 		55,
@@ -179,7 +179,7 @@ void Window::registerWindow(HINSTANCE instance)
 		NULL,
 		buttonClassName,
 		L"draw path while running",
-		WS_CHILD | WS_VISIBLE | WS_GROUP | BS_RADIOBUTTON,
+		WS_CHILD | WS_VISIBLE | BS_CHECKBOX,
 		870,
 		320,
 		150,
